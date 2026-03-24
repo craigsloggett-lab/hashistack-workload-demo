@@ -1,17 +1,6 @@
-# terraform-root-module-template
+# HashiStack Workload Demo
 
-A GitHub repository template for creating new Terraform root module.
-
-## Usage
-
-The following files require your attention immediately after creating a
-repository from this template:
-
-- [ ] .github/CODEOWNERS
-- [ ] .github/dependabot.yml
-- [ ] .github/workflows/lint.yml
-- [ ] backend.tf
-- [ ] README.md
+An infrastructure as code repository used to deploy a workload to Nomad using the HashiStack.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
