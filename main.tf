@@ -11,11 +11,9 @@ locals {
 resource "vault_policy" "workload" {
   name = local.workload_name
 
-  policy = <<-EOT
-    path "${local.mongodb_db_mount}/creds/*" {
-      capabilities = ["create", "read", "update", "delete", "list"]
-    }
-  EOT
+  policy = templatefile("${path.module}/policies/workload.hcl", {
+    mongodb_db_mount = local.mongodb_db_mount
+  })
 }
 
 # JWT role consumed by Nomad workload identity tokens. The Nomad cluster is
